@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Sentiment Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+    <div class="container mt-5">
+        <h1 class="text-center">🎬 Movie Review Sentiment Analysis</h1>
+
+        <div class="row mt-4">
+            <!-- 🎥 View Movie Reviews Section -->
+            <div class="col-md-6">
+                <div class="card bg-secondary p-4">
+                    <h3>🔍 View Movie Reviews</h3>
+                    <form action="/view_reviews" method="post">
+                        <label for="movie_name" class="form-label">Enter Movie Name:</label>
+                        <input type="text" id="movie_name" name="movie_name" class="form-control" required>
+                        <button type="submit" class="btn btn-warning mt-3 w-100">View Reviews</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ✍️ Submit a Review Section -->
+            <div class="col-md-6">
+                <div class="card bg-secondary p-4">
+                    <h3>✍️ Submit a Movie Review</h3>
+                    <form action="/analyze" method="post">
+                        <label for="movie" class="form-label">Movie Name:</label>
+                        <input type="text" id="movie" name="movie" class="form-control" required>
+
+                        <label for="review" class="form-label mt-3">Your Review:</label>
+                        <textarea id="review" name="review" class="form-control" rows="4" required></textarea>
+
+                        <button type="submit" class="btn btn-primary mt-3 w-100">Analyze Sentiment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Reviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+    <div class="container mt-5">
+        <h1 class="text-center">📢 Reviews for {{ movie }}</h1>
+
+        <!-- Removed Overall Sentiment Analysis Graph -->
+
+        <!-- Sentiment Breakdown Section -->
+        <div class="card bg-secondary p-3 mt-4">
+            <h4>📊 Sentiment Breakdown:</h4>
+            <img src="{{ chart_path }}" alt="Sentiment Analysis Pie Chart" class="img-fluid mt-3">
+            <ul>
+                <li>👍 Positive: {{ sentiment_counts['Positive'] }}</li>
+                <li>😐 Neutral: {{ sentiment_counts['Neutral'] }}</li>
+                <li>👎 Negative: {{ sentiment_counts['Negative'] }}</li>
+                <!-- Include other sentiments if applicable -->
+            </ul>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="card bg-secondary p-4 mt-4">
+            {% if reviews %}
+                <ul class="list-group">
+                    {% for review in reviews %}
+                        <li class="list-group-item bg-dark text-light">
+                            <strong>Review:</strong> {{ review.review_text }} <br>
+                            <strong>Sentiment:</strong> {{ review.sentiment }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="text-center">No reviews found.</p>
+            {% endif %}
+        </div>
+
+        <a href="/" class="btn btn-primary mt-3">🔙 Go Back</a>
+    </div>
+</body>
+</html>

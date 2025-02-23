@@ -1,7 +1,7 @@
 # 🎬 Sentiment Analysis on Movie Reviews  
 
 ## 📢 Project Overview  
-This project applies **Natural Language Processing (NLP)** techniques to analyze **movie reviews** and predict their sentiment as **positive** or **negative**.  
+This project applies **Natural Language Processing (NLP)** techniques to analyze **movie reviews** and predict their sentiment as **positive** , **negative**,**Neutal** and **sarcastic**.  
 It is built using **Python, Streamlit, Scikit-learn, and NLTK** and provides an interactive **web-based application** for real-time analysis.  
 
 ## 🚀 Features  

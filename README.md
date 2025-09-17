@@ -30,7 +30,7 @@ Follow these steps to run the project on your local system:
 
 ### **1️⃣ Clone the Repository**  
 ```sh
-git clone https://github.com/killerking301/Sentiment-Analysis-Movie-Review.git
+git clone https://github.com/VibecoderAnurag/Sentiment-Analysis-Movie-Review.git
 cd Sentiment-Analysis-Movie-Review
 
 2️⃣ **Create a Virtual Environment (Recommended)**
